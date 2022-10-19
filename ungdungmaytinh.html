@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+    <form action="ungdungmaytinh.html">
+        <h1>Caculator</h1>
+        <input type="number" name="number" id="number1">
+        <input type="number" name="number" id="number2">
+    </form>
+    <button type="button" onclick="tinhtoan1();">Addition(+)</button>
+    <button type="button" onclick="tinhtoan2();">Subtraction(-)</button>
+    <button type="button" onclick="tinhtoan3();">Multiplication(X)</button>
+    <button type="button" onclick="tinhtoan4();">Divition(/)</button><br>
+    <p id="kq">Result</p>
+    <script>
+        function showResult(pheptoan, giatri){
+            document.getElementById("kq").innerHTML="Result "+ pheptoan+ giatri;
+        }
+        function tinhtoan1(){
+            let number1=parseInt(document.getElementById("number1").value);
+            let number2=parseInt(document.getElementById("number2").value);
+            let result=number1+number2;
+            showResult("Addition: ",result);
+        }
+        function tinhtoan2(){
+            let number1=parseInt(document.getElementById("number1").value);
+            let number2=parseInt(document.getElementById("number2").value);
+            let result=number1-number2;
+            showResult("Subtraction: ",result)
+        }
+        function tinhtoan3(){
+            let number1=parseInt(document.getElementById("number1").value);
+            let number2=parseInt(document.getElementById("number2").value);
+            let result=number1*number2;
+            showResult("Result Multiplication: ",result);
+        }
+        function tinhtoan4(){
+            let number1=parseInt(document.getElementById("number1").value);
+            let number2=parseInt(document.getElementById("number2").value);
+            let result=number1/number2;
+            showResult("Result Divition: ",result);
+        }
+    </script>
+</body>
+</html>
