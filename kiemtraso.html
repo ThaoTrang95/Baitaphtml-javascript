@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số chẵn</title>
+</head>
+<body>
+    Nhập số: <br>
+    <input type="number" id="number">
+    <button type="button" onclick="Kiemtra();">Kiểm tra</button>
+    <script>
+        function Kiemtra(){
+            let number=parseInt(document.getElementById("number").value);
+            if (number %2 ==0){
+                alert("Đây là số chẵn");
+            }
+            else{
+                alert("Đây là số lẻ")
+            }
+        }
+    </script>
+</body>
+</html>
