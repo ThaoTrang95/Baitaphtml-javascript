@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉ số BMI</title>
+</head>
+<body>
+    <script>
+        let chieuCao=parseFloat(prompt("Nhập chiều cao đơn vị mét"));
+        let canNang=parseFloat(prompt("Nhập cân nặng đơn vị kilogram"));
+        let BMI=canNang/(chieuCao**2);
+        if (BMI <16){
+            alert("Gầy cấp độ III");
+        }else if(16 <= BMI && BMI< 17){
+            alert("Gầy cấp độ II");
+        }else if (17 <= BMI && BMI < 18.5){
+            alert("Gầy cấp độ I");
+        }else if (18.5 <= BMI && BMI < 25){
+            alert("Bình thường");
+        }else if(25 <= BMI && BMI< 30){
+            alert("Thừa cân");
+        }else if (30 <= BMI && BMI < 35){
+            alert("Béo phì cấp độ I");
+        }else if(35 <= BMI && BMI < 40){
+            alert("Béo phì cấp độ II");
+        }else {
+            alert("Béo phì cấp độ III");
+        }
+    </script>
+</body>
+</html>
