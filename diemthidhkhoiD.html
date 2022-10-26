@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điểm thi đại học khối D</title>
+</head>
+<body>
+    Điểm toán
+    <input type="number" id="DiemToan" min="0" max="10"><br>
+    Điểm văn
+    <input type="number" id="DiemVan" min="0" max="10"><br>
+    Điểm anh
+    <input type="number" id="DiemAnh" min="0" max="10"><br>
+    Khu vực
+    <select id="KhuVuc">
+        <option value="KV1">KV1</option>
+        <option value="KV2-NT">KV2-NT</option>
+        <option value="KV2">KV2</option>
+        <option value="KV3">KV3</option>
+    </select>
+    <br>
+    <button type="button" onclick="Tổngđiểm();">Tính điểm</button>
+    <div id="Ketqua" style="color: red;"></div>
+    <script>
+        function Tổngđiểm(){
+            let diemToan=parseFloat(document.getElementById("DiemToan").value);
+            let diemVan=parseFloat(document.getElementById("DiemVan").value);
+            let diemAnh=parseFloat(document.getElementById("DiemAnh").value);
+            let KV=document.getElementById("KhuVuc").value;
+            let diemKhuVuc;
+            if(KV=="KV1"){
+               diemKhuVuc=0.75;
+            }else if (KV=="KV2-NT"){
+                diemKhuVuc=0.5;
+            }else if(KV=="KV2"){
+                diemKhuVuc=0.25;
+            }else{
+                diemKhuVuc=0;
+            }
+            let tongDiem=diemToan + diemVan+ diemAnh+diemKhuVuc;
+        document.getElementById("Ketqua").innerHTML=` Tổng điểm ĐH khối D là ${tongDiem}`;
+        }
+    </script>
+</body>
+</html>
