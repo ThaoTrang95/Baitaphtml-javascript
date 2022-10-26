@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành switch case</title>
+</head>
+<body>
+    <h2>BAI TAP 1</h2>
+    <script>
+    switch(browser){
+        case 'Edge':
+        alert("You've got the Edge!"); break;
+        case 'Chrome':
+        case 'Firefox':
+        case 'Safari':
+        case 'Opera':
+        alert ("Okay we support these browsers too"); break;
+        default:
+        alert('We hope that this page looks ok!');
+    }
+    </script>
+    <h2>BAI TAP 2</h2>
+    <script>
+    let a = prompt('a?', '');
+    switch(a){
+        case 0:
+        alert(0); break;
+        case 1:
+        alert (1); break;
+        case 2:
+        case 3:
+        alert('2,3');break;
+    }
+    </script>
+    <h2>BAI TAP 3</h2>
+    <script>
+        let value = prompt('Type a number', 0);
+        switch(value){
+            case value>0:
+                alert(1);break;
+            case value<0:
+                alert(-1);break;
+            default:
+                alert(0);break;
+        }
+    </script>
+</body>
+</html>
