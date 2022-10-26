@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giá hoa quả</title>
+</head>
+<body>
+    <h1>Giá hoa quả</h1>
+    <input type="text" id="hoaqua">
+    <button type="button" onclick="Kiemtra();">Xem giá</button>
+    <div id="ketqua"></div>
+    <script>
+        function Kiemtra(){
+            let hoaQua=document.getElementById('hoaqua').value;
+            let giaHoaQua;
+            switch(hoaQua){
+                case 'Ổi':
+                case 'Dưa Hấu':
+                    giaHoaQua=20000;break;
+                case 'Táo':
+                case 'Xoài':
+                    giaHoaQua=30000;break;
+                case 'Cam':
+                case 'Chôm Chôm':
+                    giaHoaQua=40000;break;
+                case 'Măng Cụt':
+                    giaHoaQua=50000;break;
+                default:
+                    alert('Không tìm thấy');break;
+            }
+            document.getElementById("ketqua").innerHTML=` Giá ${hoaQua} là ${giaHoaQua}`;
+        }
+    </script>
+</body>
+</html>
