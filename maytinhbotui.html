@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+<style>
+        button{
+            width: 50px; height: 50px;
+            margin: 5px 2px;
+        }
+</style>
+</head>
+<body>
+    <div style="width: 240px; border: 1px solid blue; height: 300px;">
+        <input id="manHinh" readonly/><br>
+        <button type="button" onclick="hienThiSo('1')">1</button>
+        <button type="button" onclick="hienThiSo('2')">2</button>
+        <button type="button" onclick="hienThiSo('3')">3</button>
+        <button type="button" onclick="tinhToan('+')">+</button>
+        <button type="button" onclick="hienThiSo('4')">4</button>
+        <button type="button" onclick="hienThiSo('5')">5</button>
+        <button type="button" onclick="hienThiSo('6')">6</button>
+        <button type="button" onclick="tinhToan('-')">-</button>
+        <button type="button" onclick="hienThiSo('7')">7</button>
+        <button type="button" onclick="hienThiSo('8')">8</button>
+        <button type="button" onclick="hienThiSo('9')">9</button>
+        <button type="button" onclick="tinhToan('*')">*</button>
+        <button type="button" onclick="Xoa()">C</button>
+        <button type="button" onclick="hienThiSo('0')">0</button>
+        <button type="button" onclick="xuLyBang()">=</button>
+        <button type="button" onclick="tinhToan('/')">/</button>
+    </div> 
+    <script>
+        var soThu1=0;
+        var soThu2=0;
+        var phepToan="";
+        function hienThiSo(so){
+            let giaTriManHinh=document.getElementById('manHinh').value;
+            document.getElementById('manHinh').value=giaTriManHinh+so;
+        }
+        function tinhToan(phepTinh){
+            soThu1=parseInt(document.getElementById('manHinh').value);
+            phepToan=phepTinh;
+            document.getElementById('manHinh').value='';
+        }
+        function xuLyBang() {
+            soThu2 = parseInt(document.getElementById("manHinh").value);
+            let result = 0;
+            switch(phepToan) {
+                case '+': result = soThu1 + soThu2; break;
+                case '-': result = soThu1 - soThu2; break;
+                case '*': result = soThu1 * soThu2; break;
+                case '/': result = soThu1 / soThu2; break;
+            }
+            document.getElementById('manHinh').value=result;
+        }
+        function Xoa(){
+        document.getElementById('manHinh').value="";
+        }
+    </script>
+</body>
+</html>
