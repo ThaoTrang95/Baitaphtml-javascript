@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyen doi tien te</title>
+</head>
+<body>
+    <p>Amount</p> <br>
+    <input type="number" id="amount">
+    <p>From Currency</p><br>
+    <select id="From Currency">
+            <option value="VND">Vietnam</option>
+            <option value="USD">USD</option>
+            <option value="EURO">Euro</option>
+            <option value="JPY">JPY</option>
+    </select>
+    <p>To Currency</p>
+    <select id="To Currency">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+            <option value="EURO">Euro</option>
+            <option value="JPY">JPY</option>
+    </select>
+    <button type="button" onclick="Convert()">Convert</button>
+    <div id="ketqua"></div>
+    <script>
+            const USD_VND=24830;
+            const EURO_VND=24802;
+            const JPY_VND=169.94;
+            const USD_EURO=1;
+            const USD_JPY=147.46;
+            const EURO_JPY=146.96;
+        function Convert(){
+            let amount=parseFloat(document.getElementById('amount').value);
+            let fromCurrency=document.getElementById('From Currency').value;
+            let toCurrency=document.getElementById('To Currency').value;
+            let result;
+           switch(fromCurrency){
+            case "USD":
+                switch(toCurrency){
+                    case "EURO":result=amount/USD_EURO;break;
+                    case "VND":result=amount*USD_VND;break;
+                    case "JPY":result=amount*USD_JPY;break;
+                }break;
+            case "EURO":
+                switch(toCurrency){
+                    case "USD":result=amount*USD_EURO;break;
+                    case "JPY":result=amount*EURO_JPY;break;
+                    case "VND":result=amount*EURO_VND;break;
+                }break;
+            case "JPY":
+                switch(toCurrency){
+                    case "EURO":result=amount/EURO_JPY;break;
+                    case "USD":result=amount/USD_JPY;break;
+                    case "VND":result=amount*JPY_VND;break;
+                }break;
+            case "VND":
+                switch(toCurrency){
+                    case "EURO":result=amount/EURO_VND;break;
+                    case "USD":result=amount/USD_VND;break;
+                    case "JPY":result=amount/JPY_VND;break;
+                }break;
+            }
+            document.getElementById("ketqua").innerHTML = `<strong>Result: </strong> ${result}`;
+           }
+           
+        </script>
+</body>
+</html>
