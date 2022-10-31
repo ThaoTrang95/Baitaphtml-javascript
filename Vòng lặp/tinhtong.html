@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng</title>
+</head>
+<body>
+    <input type="number" id="so_a">
+    <input type="number" id="so_b">
+    <button type="button" onclick="tinhtong()">Tính tổng</button>
+    <div id="ketqua"></div>
+</body>
+    <script>
+        function tinhtong(){
+            var a=parseInt(document.getElementById('so_a').value);
+            var b=parseInt(document.getElementById('so_b').value);
+            var arr=new Array();
+            var j=0;
+            var tong=0;
+            for(i=a;i<=b;i++){
+                arr[j]=i;
+                tong+=i;
+                j++
+            }
+            document.getElementById('ketqua').innerHTML=`Ket qua la ${tong}`;
+        }
+    </script>
+</html>
