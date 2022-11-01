@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game doan so</title>
+</head>
+<body>
+    <button type="button" onclick="doan_so()">Play</button>
+    <div id="ketqua"></div>
+    <script>
+        function doan_so(){
+        let max = parseInt(prompt("Trò chơi đoán số từ 0 - max"))
+            let soRandom=Math.floor(Math.random()*max);
+        for(i=0;i<3;i++){
+            let soDuDoan=parseInt(prompt("Nhập vào số muốn đoán"));
+            if(soDuDoan===soRandom){
+                alert("Bạn đã đoán đúng");break;
+            }else if(soDuDoan<soRandom){
+                alert("Số dự đoán nhỏ hơn số may mắn");
+            }else if(soDuDoan>soRandom){
+                alert("Số dự đoán lớn hơn số may mắn");
+            }
+        }
+    document.getElementById('ketqua').innerHTML=(`Số may mắn là ${soRandom}`);
+    }
+    </script>
+</body>
+</html>
