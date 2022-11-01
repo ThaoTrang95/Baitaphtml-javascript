@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ve tam giac</title>
+    </head>
+    <style>
+        p{width: 50px;}
+        #kq2, #kq3{
+            text-align: right;}
+    </style>
+<body>
+    <p id="kq"></p>
+    <p id="kq1"></p>
+    <p id="kq2"></p>
+    <p id="kq3"></p>
+    <script>
+        //Tamgiac1
+        let tamGiac="";
+        let soSao="*";
+        for(let i=0;i<5;i++){
+            tamGiac+="<br>";
+            for(let j=0;j<=i;j++){
+            tamGiac+=soSao;
+            }
+        }
+        document.getElementById('kq').innerHTML=tamGiac+"<br>"
+        //Tamgiac2
+        let tamGiac2="";
+        let soSao2="*";
+        for(let i=5;i>=0;i--){
+            tamGiac2+="<br>";
+            for(let j=i;j>0;j--){
+            tamGiac2+=soSao2;
+            }
+        }
+        document.getElementById('kq1').innerHTML=tamGiac2+"<br>"
+        //Tamgiac3
+        let tamGiac3="";
+        let soSao3="*";
+        for(let i=0;i<5;i++){
+            tamGiac3+="<br>";
+            for(let j=0;j<=i;j++){
+            tamGiac3+=soSao;
+            }
+        }
+        document.getElementById('kq2').innerHTML=tamGiac3+"<br>"
+        //Tamgiac4
+        let tamGiac4="";
+        let soSao4="*";
+        for(let i=5;i>=0;i--){
+            tamGiac4+="<br>";
+            for(let j=i;j>0;j--){
+            tamGiac4+=soSao2;
+            }
+        }
+        document.getElementById('kq3').innerHTML=tamGiac4+"<br>"
+    </script>
+</body>
+</html>
