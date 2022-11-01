@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên</title>
+</head>
+<body>
+    <script>
+        let tong = 0;
+        let dem = 0;
+        let number = 6;
+        do {
+        number++;
+        if (number % 7 == 0) {
+            console.log('number=', number, "dem=", dem);
+            tong += number;
+            dem++;
+            continue;
+        }
+
+    } while (dem < 30);
+    console.log("Result: ", tong);
+    </script>
+</body>
+</html>

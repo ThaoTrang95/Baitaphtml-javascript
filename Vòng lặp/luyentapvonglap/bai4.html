@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</title>
+</head>
+<body>
+    <script>
+        let f1=1;
+        let f2=1;
+        let socantim;
+        for(i=3;i<=20;i++){
+            let nextNumber=f1+f2;
+            f1=f2;
+            f2=nextNumber;
+            console.log(nextNumber);
+            if(nextNumber%5===0){
+                socantim=nextNumber;
+        break;
+            }
+        }
+            console.log(`số đầu tiên trong dãy fibonacci chia hết cho 5: ${socantim}`);            
+        
+    </script>
+</body>
+</html>
