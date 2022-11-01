@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <script>
+        let n=parseInt(prompt('Hãy nhập số bất kỳ'));
+        let f1=1;
+        let f2=1;
+        document.write(`${f1}, ${f2}, `);
+        for(i=3;i<=n;i++){
+            let nextNumber=f1+f2;
+                document.write(`${nextNumber}, `);
+        f1=f2;
+        f2=nextNumber
+        }
+    </script>
+</body>
+</html>
