@@ -10,7 +10,7 @@
     Nhập vào một số
     <input type="number" id="number"><br>
     <button type="button" onclick="dao_nguoc_so()">OK</button>
-    <button type="button">Cancel</button>
+    <button type="button" onclick="cancel">Cancel</button>
     <div id="ketqua"></div>
     <script>
         function dao_nguoc_so(){
@@ -22,7 +22,7 @@
             }
         }
         function cancle(){
-            document.getElementById("so1").value = "";
+            document.getElementById("number").value = "";
         }
     </script>
 </body>
