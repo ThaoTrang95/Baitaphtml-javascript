@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form đơn giản</title>
+</head>
+<style>
+body {
+    width: 40%;
+    height: 10%;
+    background-color: white;
+}
+
+form {
+    background-color: aliceblue;
+}
+
+#name {
+    margin-left: 8px;
+}
+#email{
+    margin-left: 30px;
+}
+#sport {
+    margin-left: 8px;
+}
+
+#surfing-web, #travel {
+    margin-left: 66px;
+}
+
+#music {
+    margin-left: 20px;
+}
+
+#gaming {
+    margin-left: 20px;
+}
+
+#read-book {
+    margin-left: 30px;
+}
+
+ #film{
+    margin-left: 18px;
+}
+</style>
+<body>
+    <h2 style="background-color: orange;color:white;text-align: center;">SỞ THÍCH CỦA BẠN</h2 >
+    <form action="formdongian.html" method="get" >
+        <font color="blue">
+            Họ và tên <input type="text" name="Yourname" id="name"> <br>
+            Email <input type="email" name="email" id="email"> <br>
+            Sở thích </font>
+                <font color="orange">
+                    <label class="checkbox-inline">
+                    <input type="checkbox" name="hobby" id="sport">Thể Thao
+                    </label>
+                    <label class="checkbox-inline">
+                    <input type="checkbox" name="hobby" id="music">Âm nhạc
+                    </label>
+                    <label class="checkbox-inline">
+                    <input type="checkbox" name="hobby" id="read-book">Đọc sách <br>
+                    </label>
+                    <label class="checkbox-inline">
+                    <input type="checkbox" name="hobby" id="surfing-web">Lướt web
+                    </label>
+                    <label class="checkbox-inline">
+                    <input type="checkbox" name="hobby" id="gaming">Chơi game
+                    </label>
+                    <label class="checkbox-inline">
+                    <input type="checkbox" name="hobby" id="film">Điện ảnh <br>
+                    </label>
+                    <label class="checkbox-inline">
+                    <input type="checkbox" name="hobby" id="travel">Du lịch <br>
+                    </label>
+                </font>
+            <input type="submit" value="Gửi thông tin">
+            <input type="reset" value="Nhập lại">
+    </form>
+</body>
+</html>

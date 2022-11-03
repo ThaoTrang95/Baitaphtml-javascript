@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dang ki hoc vien</title>
+</head>
+<style>
+    body {
+    width: 50%;
+    height: 10%;
+    color: blue;
+    }
+    form{
+        background-color: blanchedalmond;
+    }
+    h2{
+        background-color: rgb(210, 240, 219);
+        text-align: left;
+        color: rgb(3, 15, 244);
+        padding-top: 15px;
+        padding-left: 5px;
+        height: 40px;
+    };
+   
+    #yourname {
+    margin-left: 46px;
+    }
+
+    #birthday {
+    margin-left: 46px;
+    }
+
+    #male {
+    margin-left: 50px;
+    }
+
+    #address {
+    margin-left: 65px;
+    }
+
+    #classes {
+    margin-left: 85px;
+    }
+
+    #email {
+    margin-left: 78px;
+    width: 150px;
+    }
+
+    #phone {
+    margin-left: 45px;
+    width: 150px;
+    }
+</style>
+<body>
+    <form method="post" action="formdangky.html"> 
+        <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+        <p>
+            <label class="label-items" for="yourname">Họ và tên</label>
+            <input type="text" name="yourname" id="yourname"><br>
+        </p>
+        <p>
+            <label class="label-items" for="brithday">Ngày sinh</label>
+            <input type="text" name="yourname" id="birthday"><br>
+        </p>
+        <p>
+            <label class="label-items">Giới tính</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Nam</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Nữ</label><br>
+        </p>
+        <p class="formfield">
+            <label class="label-items" for="address">Địa chỉ</label>
+            <textarea id="address" rows="3" cols="30"></textarea><br>
+        </p>
+        <p>
+            <label class="label-items" for="classes">Lớp</label>
+            <select name="classes" id="classes">
+                <option value="">-- Chọn lớp --</option>
+                <option value="class1">Lớp 1</option>
+                <option value="class1">Lớp 2</option>
+                <option value="class1">Lớp 3</option>
+            </select><br>
+        </p>
+        <p>
+            <label class="label-items" for="email">Enail</label> 
+            <input type="email" name="email" id="email"><br>
+        </p>
+        <p>
+            <label class="label-items" for="phone">Điện thoại</label> 
+            <input type="text" name="phone" id="phone"><br>
+        </p><br>
+        <input type="submit" name="submit" value="Đăng ký">
+        <input type="reset" name="reset" value="Nhập lại">
+    </form>
+</body>
+</html>
