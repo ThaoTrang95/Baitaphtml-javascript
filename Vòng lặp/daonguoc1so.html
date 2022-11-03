@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đảo ngược số</title>
+</head>
+<body>
+    Nhập vào một số
+    <input type="number" id="number"><br>
+    <button type="button" onclick="dao_nguoc_so()">OK</button>
+    <button type="button" onclick="cancel">Cancel</button>
+    <div id="ketqua"></div>
+    <script>
+        function dao_nguoc_so(){
+            let a=document.getElementById("number").value;
+            let z="";
+            for(let i=a.length-1;i>=0;i--){
+                z+=a[i];
+            document.getElementById('ketqua').innerHTML=z;
+            }
+        }
+        function cancle(){
+            document.getElementById("number").value = "";
+        }
+    </script>
+</body>
+</html>
