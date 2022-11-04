@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành đảo ngược phần tử</title>
+</head>
+<body>
+    <input type="number" id="soPhanTu"> <br>
+    <button type="button" onclick="hien_thi()">Display</button>
+    <button type="button" onclick="chuoidaonguoc()">Reverse</button>
+    <div id="ketqua1"></div>
+    <div id="ketqua2"></div>
+    <script>
+        let mang=new Array();
+        function hien_thi(){
+            let soPhanTu=parseInt(document.getElementById('soPhanTu').value);
+            for(let i=0;i<soPhanTu;i++){
+            mang[i]=Math.floor(Math.random()*56);
+            document.getElementById('ketqua1').innerHTML=mang.join(" ");
+        }
+    }
+        function chuoidaonguoc(){
+            let chuoiMoi="";
+            for(let i=mang.length-1;i>=0;i--){
+            chuoiMoi+=`${mang[i]} `;
+            }
+            document.getElementById('ketqua2').innerHTML=chuoiMoi;
+        }
+    </script>
+</body>
+</html>
