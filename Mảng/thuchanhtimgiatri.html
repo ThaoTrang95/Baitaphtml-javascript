@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim gia tri trong mang</title>
+</head>
+<body>
+    <div>
+        Khởi tạo mảng có:
+    <input type="number" min="1" id="soPhanTu"> phần tử
+    <button type="button" onclick="khoitaomang()">Khởi tạo</button> <br>
+        Cần tìm:
+    <input type="number" id="giaTriCanTim">
+    <button type="button" onclick="tim()">Tìm</button>
+    </div>
+    <div id="mang"></div>
+        <script>
+        let mang=[];
+        function khoitaomang(){
+            let soPhanTu=parseInt(document.getElementById('soPhanTu').value);
+            for(let i=0;i<soPhanTu;i++){
+                mang[i]=Math.floor(Math.random()*56);
+                document.getElementById('mang').innerHTML=mang;
+            }
+        }
+        function tim(){
+            let value=parseInt(document.getElementById('giaTriCanTim').value)
+            for (let i = 0; i < mang.length; i++) {
+            if (value == mang[i]) {
+            alert("Value " + mang[i] + " found at " + i);
+        }
+        }
+        }
+    </script>
+</body>
+</html>
