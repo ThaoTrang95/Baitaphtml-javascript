@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find max, min</title>
+</head>
+<body>
+    Tạo mảng có số phần tử là:
+    <input type="number" id="soPhanTu">
+    <button type="button" onclick="hien_thi()">Display</button>
+    <button type="button" onclick="timMax()">Max</button>
+    <button type="button" onclick="timMin()">Min</button>
+    <div id="ketqua"></div>
+    <div id="max"></div>
+    <div id="min"></div>
+    <script>
+        let mang=new Array();
+         
+        function hien_thi(){
+            let soPhanTu=parseInt(document.getElementById("soPhanTu").value);
+            for(let i=0;i<soPhanTu;i++){
+            mang[i]=Math.floor(Math.random()*56);
+            document.getElementById('ketqua').innerHTML=mang.join();
+        }
+    }
+        function timMax(){
+            let max=mang[0];
+            for (let i = 1; i < mang.length; i++) {
+                if (mang[i] > max) {
+                max = mang[i];
+                index = i;
+                }
+            }
+            document.getElementById("max").innerHTML=("Max: " + max + " at position " + index);
+        }
+        function timMin(){
+            let min=mang[0];
+            for(let i=1;i<mang.length;i++){
+                if(mang[i]<min){
+                min = mang[i];
+                index = i;
+                }
+            }
+            document.getElementById("min").innerHTML=("Min: " + min + " at position " + index);
+            }
+        
+    </script>
+</body>
+</html>
