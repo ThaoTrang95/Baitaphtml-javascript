@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo bàn caro đơn giản</title>
+</head>
+<body>
+    <h3>Caro Game Simple</h3>
+    <div id="Result"></div>
+    <button type="button" onclick="thayDoiGiaTri(); print()">Chang Value</button>
+    <script>
+        const dong=5, cot=5;
+        let array=[];
+        function khoiTaoMang(){
+            for(let i=0;i<dong;i++){
+                array[i]=new Array(cot);
+                for(let j=0;j<cot;j++){
+                    array[i][j]="0";
+                }
+            }
+        }
+        function thayDoiGiaTri(){
+            let viTriDong=parseInt(prompt('Nhap dong so'));
+            let viTriCot=parseInt(prompt('Nhap cot so'));
+            array[viTriDong][viTriCot]="x";
+        }
+        function print(){
+            let chuoi = "";
+            for (let i = 0; i < array.length; i++) {
+                chuoi += "<br>";                
+                for (let j = 0; j < array[i].length; j++) {
+                    chuoi += array[i][j] + "&nbsp;&nbsp;";
+                }
+            }
+            document.getElementById("Result").innerHTML=chuoi;
+        }
+        khoiTaoMang();
+        print();
+    </script>
+</body>
+</html>
