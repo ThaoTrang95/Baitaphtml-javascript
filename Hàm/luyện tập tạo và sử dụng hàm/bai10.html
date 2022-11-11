@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 10</title>
+</head>
+<body>
+    Nhập chuỗi: <input type="text" id="chuoi"/><br>
+    Ký tự: <input type="text" id="kytu"/> <br>
+    <button type="button" onclick="check()">Kiểm tra</button>
+    <div id="Result"></div>
+        <script>
+            function coBaoNhieu(arr,str){
+                let count=0;
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] == str) {
+                    count+=1;
+                    }
+                }
+                return count;
+            }
+
+            function check(){
+                let kyTu=document.getElementById("kytu").value;
+                let chuoi=document.getElementById("chuoi").value
+                let soLanXuatHien=coBaoNhieu(chuoi, kyTu);
+                if(soLanXuatHien == 0) {
+                    document.getElementById("Result").innerHTML =  "-1";
+                } else {
+                    document.getElementById("Result").innerHTML = `Ký tự ${kyTu} xuất hiện ${soLanXuatHien} trong chuỗi ${chuoi}`;
+                }
+        }
+        </script>
+</body>
+</html>

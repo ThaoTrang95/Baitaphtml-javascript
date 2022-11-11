@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 5</title>
+</head>
+<body>
+    <input type="number" id="soNguyen">
+    <button type="button" onclick="tinhGiaiThua()">Tính toán</button>
+    <div id="kq"></div>
+    <script>
+        function giaiThua(n){
+            let i=1;
+            let giaiThua=1;
+            while (i<=n){
+                giaiThua*=i;
+                i++
+            }
+            return giaiThua;
+        }
+        function tinhGiaiThua(){
+        let n=parseInt(document.getElementById("soNguyen").value);
+        let result=giaiThua(n);
+        document.getElementById('kq').innerHTML=`Giai thừa của ${n} là ${result}`;
+        }
+    </script>
+</body>
+</html>

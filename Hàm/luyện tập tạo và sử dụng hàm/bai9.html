@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 9</title>
+</head>
+<body>
+    Tạo chuỗi có số phần tử là
+    <input type="number" id="soPhanTu"> phần tử 
+    <button type="button" onclick="hienthi()">Hiển thị</button>
+    <div id="ketqua1"></div>
+    Đảo chuỗi 
+    <button type="button" onclick="chuoidaonguoc()">Reverse</button>
+    <div id="ketqua2"></div>
+    <script>
+        function reverse(str){
+           return str.reverse().join(" ");
+        }
+            let mang=[];
+            function hienthi(){
+            let soPhanTu=parseInt(document.getElementById('soPhanTu').value);
+            for(let i=0;i<soPhanTu;i++){
+            mang[i]=Math.floor(Math.random()*56);
+            document.getElementById('ketqua1').innerHTML=`Chuỗi ban đầu là: ${mang.join(" ")}`;
+            }
+            }
+            function chuoidaonguoc(){
+            let result=[reverse(mang)];
+            document.getElementById('ketqua2').innerHTML=`Kết quả chuỗi đảo là: ${result.join(" ")}`;
+        }
+        </script>
+</body>
+</html>

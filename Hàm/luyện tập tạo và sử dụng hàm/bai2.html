@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai2</title>
+</head>
+<body>
+    <script>
+        function myFunction(starsName) {
+            let stars = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+            let constellation = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+            for (let i = 0; i <= stars.length;i++) {
+                if (starsName === stars[i]) {
+                    stars[i] === constellation[i];  
+                    return (constellation[i]);                
+                }                               
+            } return ("Not found");
+        } 
+        let starsName1 = prompt("Enter the name of the star: ");
+        alert(myFunction(starsName1));
+    </script>
+</body>
+</html>

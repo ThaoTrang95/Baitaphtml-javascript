@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai4</title>
+</head>
+<body>
+    <input type="number" id="banKinh">
+    <button type="button" onclick="tinhChuVivaDienTich()">Tính chu vi và diện tích</button>
+    <div id="result"></div>
+    <script>
+        const pi=3.14;
+        function chuVi(r){
+             return r*2*pi;
+            
+        }
+        function dienTich(r){
+            return Math.pow(r,2)*pi;
+            
+        }
+        function tinhChuVivaDienTich(){
+            let r=parseInt(document.getElementById('banKinh').value);
+            let c=chuVi(r);
+            let s=dienTich(r);
+            document.getElementById("result").innerHTML=`Chu vi hình tròn là: ${c}; diện tích hình tròn là: ${s}`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+    <input type="text" id="nhapTu">
+    <button type="button" onclick="check()">Kiểm tra từ đối xứng</button>
+    <div id="result"></div>
+    <script>
+        function isPalindrome(str) {
+                for(let i = 0, len = str.length - 1; i < len/2; i++) {
+                    if (str[i] !== str[len-i]) {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+        function check(){
+            let chuoi=document.getElementById("nhapTu").value;
+            let chuoiDoiXung=isPalindrome(chuoi);
+            if(chuoiDoiXung){
+                alert("True");
+            }else {
+                alert("False");
+            }
+        }
+    </script>
+</body>
+</html>
