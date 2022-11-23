@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp Date</title>
+</head>
+<body>
+    <script>
+        
+        class MyDate{
+            constructor(day, month, year){
+                
+                    this.day=day;
+                    this.month=month;
+                    this.year=year;
+                
+            }
+            getDay() {
+                return this.day;
+            }
+            getMonth() {
+                return this.month;
+            }
+            getYear() {
+                return this.year;
+            }
+            setDate(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            }
+            
+            toString() {
+                let result = "";
+
+                if(this.day < 10) {
+                  result += "0" + this.day + "/";
+                } else {
+                  result += this.day + "/";
+                }
+
+                if(this.month < 10) {
+                  result += "0" + this.month + "/";
+                } else {
+                  result += this.month + "/";
+                }
+                return result + this.year;
+      }
+    }
+            let myDate = new MyDate(23, 11, 2022);
+            let date = myDate.toString();
+            myDate.setDate(01, 01, 2023);
+            let dateNew = myDate.toString();
+            alert(`date: ${date} - update : ${dateNew}`);
+    </script>
+</body>
+</html>
