@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+    <div>
+        Dài: <input id="chieuDai" type="number" min="1" /><br>
+        Rộng: <input id="chieuRong" type="number" min="1" /><br>
+        <button type="button" onclick="updateHCN()">Vẽ hình</button>
+        <div id="result"></div>
+    </div>
+    <canvas id="myCanvas" width="800" height="600" style="border: 3px solid #000000"></canvas>
+    <script>
+        class Rectangle {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+
+            setHeight(height) {
+                this.height = height;
+            };
+
+            setWidth(width) {
+                this.width = width;
+            };
+
+            getPerimeter() {
+                return (this.height + this.width) * 2;
+            }
+
+            getArea() {
+                return this.height * this.width;
+            }
+            draw(ctx, x, y) {
+                ctx.beginPath();
+                ctx.fillStyle='Pink';
+                ctx.fillRect(x, y, this.width, this.height);
+            }
+
+            clear(ctx, x, y) {
+                ctx.clearRect(x, y, this.width, this.height);
+            }
+        }
+        const x = 80;
+        const y = 80;
+        let myRectangle = new Rectangle(400, 600);
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        myRectangle.draw(ctx, 80, 80);
+        document.getElementById("result").innerHTML = `Perimeter: ${myRectangle.getPerimeter()} & Area: ${myRectangle.getArea()}`;
+        function updateHCN(){
+                let newHeight = parseInt(document.getElementById("chieuDai").value);
+                let newWidth = parseInt(document.getElementById("chieuRong").value);
+
+                myRectangle.clear(ctx, x, y);
+                myRectangle.setHeight(newHeight);
+                myRectangle.setWidth(newWidth);
+                myRectangle.draw(ctx, x, y);
+                document.getElementById("result").innerHTML = `Perimeter: ${myRectangle.getPerimeter()} Area: ${myRectangle.getArea()}`;
+            
+        }
+        
+    </script>
+</body>
+</html>
