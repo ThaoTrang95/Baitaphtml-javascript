@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Game Cờ Caro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.15/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.15/dist/sweetalert2.min.js"></script>
+        <script type="text/javascript" src="./caro.js"></script>
+    </head>
+    <body  id="bgr">
+        <div id="main">
+            <div id="divcontrol">
+                <div id="label"><b>CURENT PLAYER:</b></div>
+                <div id="imgPlayer"></div>
+                <br/>
+                <div id="name"></div>
+                <button type="button" class="button"onClick="reset()">RESET</button><br/>
+            </div>
+
+            <div id="game-board">
+            </div>
+        </div>
+        <script>
+            const DEFAULT_COLS = 16;
+            const DEFAULT_ROWS = 16;
+            let gameBoard;
+
+            function start() {
+                gameBoard = new Board(DEFAULT_ROWS, DEFAULT_COLS, "game-board");
+                gameBoard.draw();
+            }
+
+            function play(x, y) {
+                gameBoard.play(x, y);
+            }
+
+            start();
+        </script>
+    </body>
+</html>

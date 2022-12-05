@@ -1,0 +1,92 @@
+#bgr{
+    background-image:url('./Images/background.png');
+}
+#main {
+    margin-left: 35%;
+}
+#divcontrol
+{
+	width:300px;
+	height:300px;
+	float:right;
+	background-color:rgba(255, 255, 255, 0.493);
+	margin-right:150px;
+	margin-top:100px;
+	overflow: hidden;
+	border-radius:20px;
+}
+#label
+{
+	margin-top:10px;
+	margin-left:20px;
+}
+#imgPlayer
+{
+	width:100px;
+	height:100px;
+	margin:auto;
+	margin-top:10px;
+	background-image:url('./Images/Opng.png');
+	background-repeat:round;
+	background-color:rgba(128, 128, 128, 0.075);
+}
+#name
+{
+    margin-top:20px;
+	margin-left: 80px;
+    font-weight: bolder;
+}
+#label2
+{
+	margin-top:10px;
+	margin-left:20px;
+	float:left;
+}
+#pgrTime
+{
+	margin-left:10px;
+	margin-top:14px;
+	width:150px;
+	height:14px;
+	background-color:greenyellow;
+}
+
+.button{
+    
+    width:200px;
+    height:50px;
+    margin-left:50px;
+    margin-top:30px;
+    font-weight:700;
+    font-family:"Arial Black", Gadget, sans-serif;
+    background-color:red;
+    cursor:pointer;
+    border-radius:15px;
+    color:white;
+
+}
+#game-board{
+    position: relative;
+    margin-top: 5px;
+}
+
+.cell{
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    border: solid 1px rgb(74, 74, 76);
+    text-align: center;
+    font-size:20pt;
+    cursor: pointer;
+    line-height: 40px;
+    background-color: azure;
+}
+
+.O {
+    color: rgb(8, 32, 247);
+}
+
+.X {
+    color: rgb(247, 92, 8);
+}
+
